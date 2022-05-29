@@ -14,6 +14,7 @@
 점수가 0.94에 가깝게 나온다면 overfitting이 난것이고 점수가 똑같이 0.85수준으로 나온다면 파라미터(토큰과 max_len) 문제인 것이다.
 
 추가적으로 중복 데이터가 많은지 확인해보아야겠다. train loss와 val loss 모두 이쁘게 내려갔는데 무엇이 문젠지 모르겠다.
-<img src = "[Your Image Addr](https://user-images.githubusercontent.com/37128004/170868396-e26f915d-c8dc-4f72-93ff-6ee57c328a17.png)">
+![화면 캡처 2022-05-29 213012](https://user-images.githubusercontent.com/37128004/170868396-e26f915d-c8dc-4f72-93ff-6ee57c328a17.png)
 
-TPU를 적용한다고 적용했는데 속도는 전혀늘지 않고 batch_size만 늘리는 용도로 사용중이다. Trainer 와 TrainingArgument API 사용해서 훈련하려다보니 커스터마이징이 불편해서 속도 개선방법을 계속 찾지 못한다면 직접 짜는 방향으로 틀어야겠다. 
+TPU를 적용한다고 적용했는데 속도는 전혀늘지 않고 batch_size만 늘리는 용도로 사용중이다. 
+Trainer 와 TrainingArgument API 사용해서 훈련하려다보니 커스터마이징이 불편해서 속도 개선방법을 계속 찾지 못한다면 직접 짜는 방향으로 틀어야겠다. 
