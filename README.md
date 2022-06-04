@@ -26,7 +26,9 @@ Trainer 와 TrainingArgument API 사용해서 훈련하려다보니 커스터마
 토크나이징 과정에서 토큰 갯수가 300개 이하인 데이터를 버리고 사용했는데 모델링 과정에서 MAX_LEN을 256으로 두고 실험하고 있었다.
 거의 반정도만 보고 학습을 하고 있던 것이라 acc가 나오지 않았던 것으로 추정된다. 
 
-# 5.31
+## 5.31
 MAX_LEN을 512로 바꾸고 실험한 결과 accuracy가 소폭 상승했으나 기대한 수준은 아니었다. 최고점이 나왔던 경우는 data 자체가 graphcode-bert 모델로 토크나이징 했었다. 
 따라서 토크나이징과 pair 구성에 문제가 있었다는 가설 하에 이번엔 huggingface/CodeBERTa-small 말고 microsoft/graphcodebert-base 를 이용하여 토크나이징하고 pair를 구성해보았다. train 데이터 구성에만 34시간이 걸리는 3중 for문을 돌려야 했다.
 
+## 6.1
+negative pair를 만드든 과정에 문제가 있음을 확인하고 새로운 방법으로 데이터를 가져왔다. 
